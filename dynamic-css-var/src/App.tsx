@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import "./App.css";
 
 const App: React.FC = () => {
   const [userId, setUserId] = useState("");
@@ -13,10 +12,6 @@ const App: React.FC = () => {
   }
 
   function onClickHandler() {
-    spaceValidation();
-  }
-
-  function spaceValidation() {
     if (userId.match(/ /) && password.match(/ /)) {
       setErrorMessage("ユーザーIDとパスワードに空白が含まれているよ");
       setBackgroundColorForUserId("var(--bg-yellow)");
